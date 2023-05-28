@@ -21,9 +21,30 @@ class SignInView extends GetView<SignInController> {
             padding: const EdgeInsets.all(8.0),
             child: SingleChildScrollView(
               child: Column(
-                //  mainAxisAlignment: MainAxisAlignment.,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // CircleAvatar(
+                  //   backgroundImage:
+                  //       AssetImage("assets/img/charging-station.png"),
+                  //   radius: 50.0,
+                  // ),\
+                  SizedBox(
+                    height: 15,
+                  ),
+                  ClipOval(
+                      child: Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage("assets/img/charging-station.png"),
+                              fit: BoxFit.fitWidth,
+                            ),
+                          ))),
+                  SizedBox(
+                    height: 15,
+                  ),
                   Text(
                     "Sign In",
                     style: TextStyle(
@@ -34,13 +55,14 @@ class SignInView extends GetView<SignInController> {
                   SizedBox(
                     height: 10,
                   ),
-                  const Text("Use Your Email to continue or create account"),
+                  const Text("Use Your Phone to continue or create account"),
                   const SizedBox(
                     height: 20,
                   ),
                   TextField(
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        label: Text("Email"),
+                        label: Text("Phone"),
                         border: OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0)),

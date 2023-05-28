@@ -38,91 +38,90 @@ class StationDetailsView extends GetView<StationDetailsController> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(children: [
-                SizedBox(
-                  width: Get.width,
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'The North Gate parking lot',
-                                    style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    "Afcon company",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                ],
-                              ),
-                              Transform.rotate(
-                                angle: 45,
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.navigation_outlined),
-                                  iconSize: 40,
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'The North Gate parking lot',
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
                                 ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              RatingBar.builder(
-                                initialRating: 3,
-                                minRating: 1,
-                                direction: Axis.horizontal,
-                                allowHalfRating: true,
-                                itemCount: 5,
-                                itemSize: 30,
-                                itemPadding:
-                                    EdgeInsets.symmetric(horizontal: 4.0),
-                                itemBuilder: (context, _) =>
-                                    Icon(Icons.star, color: Color(0xffc0392b)),
-                                onRatingUpdate: (rating) {
-                                  print(rating);
-                                },
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.comment),
-                                iconSize: 40,
-                                color: Colors.black,
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
+                                SizedBox(
+                                  height: 5,
                                 ),
+                                Text(
+                                  "Afcon company",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                            Transform.rotate(
+                              angle: 45,
+                              child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.navigation_outlined),
                                 iconSize: 40,
-                                color: Colors.black,
                               ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                        ],
-                      ),
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RatingBar.builder(
+                              initialRating: 3,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemSize: 30,
+                              itemPadding:
+                                  EdgeInsets.symmetric(horizontal: 4.0),
+                              itemBuilder: (context, _) =>
+                                  Icon(Icons.star, color: Color(0xfffed330)),
+                              onRatingUpdate: (rating) {
+                                print(rating);
+                              },
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.comment),
+                              iconSize: 40,
+                              color: Colors.black,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.favorite,
+                                color: Color(0xfffed330),
+                              ),
+                              iconSize: 40,
+                              color: Colors.black,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                      ],
                     ),
                   ),
                 ),

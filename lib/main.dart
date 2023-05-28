@@ -86,10 +86,10 @@ class _MainState extends State<Main> {
       bottomNavigationBar: FluidNavBar(
         icons: [
           FluidNavBarIcon(
-              icon: Icons.sports_outlined, extras: {"label": "partner"}),
-          FluidNavBarIcon(icon: Icons.home, extras: {"label": "bookmark"}),
+              icon: Icons.favorite_border, extras: {"label": "Favorite"}),
+          FluidNavBarIcon(icon: Icons.home, extras: {"label": "Home"}),
           FluidNavBarIcon(
-              icon: Icons.account_circle_sharp, extras: {"label": "partner"}),
+              icon: Icons.account_circle_sharp, extras: {"label": "Profile"}),
         ],
         onChange: _handleNavigationChange,
         style: FluidNavBarStyle(

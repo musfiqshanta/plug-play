@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/addCar/bindings/add_car_binding.dart';
+import '../modules/addCar/views/add_car_view.dart';
 import '../modules/forgotPassword/bindings/forgot_password_binding.dart';
 import '../modules/forgotPassword/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.STATION_DETAILS,
       page: () => const StationDetailsView(),
       binding: StationDetailsBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_CAR,
+      page: () => AddCarView(),
+      binding: AddCarBinding(),
     ),
   ];
 }

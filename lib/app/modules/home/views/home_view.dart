@@ -15,12 +15,12 @@ class HomeView extends GetView<HomeController> {
         title: const Text('Plug & Play'),
         automaticallyImplyLeading: true,
         actions: [
-          Row(
+          const Row(
             children: [
               Icon(Icons.directions_car),
               Center(
                   child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Tesla S",
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -42,7 +42,7 @@ class HomeView extends GetView<HomeController> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -100,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(
-                            Icons.camera,
+                            Icons.filter_alt,
                             size: 35,
                           ),
                         ),
@@ -121,12 +121,12 @@ class HomeView extends GetView<HomeController> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.to(StationDetailsView());
+                      Get.to(const StationDetailsView());
                     },
                     child: SizedBox(
                       width: Get.width,
@@ -143,11 +143,11 @@ class HomeView extends GetView<HomeController> {
                                 children: [
                                   const Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        "Afcon company",
+                                        "The North Gate parking lot",
                                         style: TextStyle(
                                           fontSize: 22,
                                           fontWeight: FontWeight.bold,
@@ -158,9 +158,9 @@ class HomeView extends GetView<HomeController> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'The North Gate parking lot',
+                                        'Afcon company',
                                         style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 18,
                                             color: Colors.black54),
                                       )
                                     ],
@@ -169,13 +169,14 @@ class HomeView extends GetView<HomeController> {
                                     angle: 45,
                                     child: IconButton(
                                       onPressed: () {},
-                                      icon: Icon(Icons.navigation_outlined),
+                                      icon:
+                                          const Icon(Icons.navigation_outlined),
                                       iconSize: 40,
                                     ),
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Row(
@@ -188,17 +189,17 @@ class HomeView extends GetView<HomeController> {
                                         "assets/img/ccs.png",
                                         width: 50,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "100 KW",
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 14),
                                       )
                                     ],
                                   ),
-                                  Center(
+                                  const Center(
                                     child: Text(
                                       "5",
                                       style: TextStyle(
@@ -214,17 +215,17 @@ class HomeView extends GetView<HomeController> {
                                         "assets/img/type2.png",
                                         width: 50,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "50 KW",
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 14),
                                       )
                                     ],
                                   ),
-                                  Center(
+                                  const Center(
                                     child: Text(
                                       "3",
                                       style: TextStyle(
@@ -241,14 +242,14 @@ class HomeView extends GetView<HomeController> {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   ChoiceChip(
-                                    label: Text("Availabel"),
-                                    labelStyle: TextStyle(
+                                    label: const Text("Availabel"),
+                                    labelStyle: const TextStyle(
                                         color: Colors.white, fontSize: 16),
                                     selected: true,
                                     selectedColor: Get.theme.primaryColor,
                                     onSelected: (value) {},
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.location_on),
                                       Text(
@@ -258,7 +259,7 @@ class HomeView extends GetView<HomeController> {
                                       )
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(Icons.directions_car_outlined),
                                       Text(
@@ -314,13 +315,13 @@ class HomeView extends GetView<HomeController> {
                                   angle: 45,
                                   child: IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.navigation_outlined),
+                                    icon: const Icon(Icons.navigation_outlined),
                                     iconSize: 40,
                                   ),
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Row(
@@ -332,17 +333,17 @@ class HomeView extends GetView<HomeController> {
                                       "assets/img/ccs.png",
                                       width: 50,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
-                                    Text(
+                                    const Text(
                                       "100 KW",
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 14),
                                     )
                                   ],
                                 ),
-                                Center(
+                                const Center(
                                   child: Text(
                                     "5",
                                     style: TextStyle(
@@ -358,17 +359,17 @@ class HomeView extends GetView<HomeController> {
                                       "assets/img/type2.png",
                                       width: 50,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
-                                    Text(
+                                    const Text(
                                       "50 KW",
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 14),
                                     )
                                   ],
                                 ),
-                                Center(
+                                const Center(
                                   child: Text(
                                     "3",
                                     style: TextStyle(
@@ -384,14 +385,14 @@ class HomeView extends GetView<HomeController> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 ChoiceChip(
-                                  label: Text("Availabel"),
-                                  labelStyle: TextStyle(
+                                  label: const Text("Availabel"),
+                                  labelStyle: const TextStyle(
                                       color: Colors.white, fontSize: 16),
                                   selected: false,
-                                  selectedColor: Color(0xff27ae60),
+                                  selectedColor: const Color(0xff27ae60),
                                   onSelected: (value) {},
                                 ),
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(Icons.location_on),
                                     Text(
@@ -401,7 +402,7 @@ class HomeView extends GetView<HomeController> {
                                     )
                                   ],
                                 ),
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(Icons.directions_car_outlined),
                                     Text(

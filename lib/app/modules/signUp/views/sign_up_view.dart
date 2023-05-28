@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:plugandplay/app/modules/addCar/views/add_car_view.dart';
 
 import '../../signIn/views/sign_in_view.dart';
 import '../controllers/sign_up_controller.dart';
@@ -35,7 +36,10 @@ class SignUpView extends GetView<SignUpController> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text("Welcome To Plug & Play"),
+                  const Text(
+                    "Welcome To Plug & Play",
+                    style: TextStyle(color: Colors.black),
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
@@ -52,8 +56,24 @@ class SignUpView extends GetView<SignUpController> {
                   ),
                   TextField(
                     controller: controller,
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         label: Text("Email"),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                            borderSide: BorderSide(width: 1))),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'[0-9,+]'))
+                    ],
+                    decoration: const InputDecoration(
+                        label: Text("Phone"),
                         border: OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0)),
@@ -71,21 +91,7 @@ class SignUpView extends GetView<SignUpController> {
                                 BorderRadius.all(Radius.circular(10.0)),
                             borderSide: BorderSide(width: 1))),
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  TextField(
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      FilteringTextInputFormatter.allow(RegExp(r'[0-9,+]'))
-                    ],
-                    decoration: const InputDecoration(
-                        label: Text("Enter You Phone Number"),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                            borderSide: BorderSide(width: 1))),
-                  ),
+
                   const SizedBox(
                     height: 15,
                   ),
@@ -103,11 +109,11 @@ class SignUpView extends GetView<SignUpController> {
                           fixedSize: MaterialStateProperty.all(
                               Size(Get.mediaQuery.size.width, 50))),
                       onPressed: () {
-                        Get.to(SignInView(),
+                        Get.to(AddCarView(),
                             transition: Transition.rightToLeft);
                       },
                       child: Text(
-                        "Sign Up",
+                        "Next",
                         style: TextStyle(fontSize: 22),
                       )),
                   const SizedBox(

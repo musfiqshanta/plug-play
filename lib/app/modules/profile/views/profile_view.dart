@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../addCar/views/add_car_view.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -80,6 +81,26 @@ class ProfileView extends GetView<ProfileController> {
                   onTap: () {},
                   title: Text(
                     "Settings",
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xff30336b),
+                ),
+                child: ListTile(
+                  onTap: () {},
+                  title: Text(
+                    "Billing Address",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   trailing: Icon(
@@ -185,7 +206,12 @@ class ProfileView extends GetView<ProfileController> {
                     backgroundColor: Get.theme.primaryColor,
                     fixedSize: Size(Get.mediaQuery.size.width, 50),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(
+                      AddCarView(),
+                      transition: Transition.upToDown,
+                    );
+                  },
                   child: Text(
                     "Add Car",
                     style: TextStyle(fontSize: 18),
@@ -198,7 +224,7 @@ class ProfileView extends GetView<ProfileController> {
                 ),
                 subtitle: Text(
                   "musfiqshanta@gmail.com",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ),
               ListTile(
@@ -209,7 +235,7 @@ class ProfileView extends GetView<ProfileController> {
                 ),
                 subtitle: Text(
                   "555 456 898",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ),
               ListTile(
@@ -220,7 +246,7 @@ class ProfileView extends GetView<ProfileController> {
                 ),
                 subtitle: Text(
                   "123 Main St, Anytown USA",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ),
             ],
