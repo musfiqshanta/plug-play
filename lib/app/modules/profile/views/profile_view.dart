@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../../addCar/views/add_car_view.dart';
+import '../../addCar/views/take_photo.dart';
+import '../../vehicles/views/vehicles_view.dart';
 import '../controllers/profile_controller.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class ProfileView extends GetView<ProfileController> {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
@@ -43,7 +44,9 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                       subtitle: Text(
                         "musfiqshanta@gmail.com",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   )
@@ -58,6 +61,10 @@ class ProfileView extends GetView<ProfileController> {
                   color: Color(0xff30336b),
                 ),
                 child: ListTile(
+                  leading: Icon(
+                    FontAwesomeIcons.chargingStation,
+                    color: Colors.white,
+                  ),
                   onTap: () {},
                   title: Text(
                     "Charging Stations",
@@ -78,9 +85,15 @@ class ProfileView extends GetView<ProfileController> {
                   color: Color(0xff30336b),
                 ),
                 child: ListTile(
-                  onTap: () {},
+                  leading: Icon(
+                    FontAwesomeIcons.car,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    Get.to(VehiclesView(), transition: Transition.rightToLeft);
+                  },
                   title: Text(
-                    "Settings",
+                    "My Vehicles",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   trailing: Icon(
@@ -98,6 +111,34 @@ class ProfileView extends GetView<ProfileController> {
                   color: Color(0xff30336b),
                 ),
                 child: ListTile(
+                  leading: Icon(
+                    FontAwesomeIcons.gear,
+                    color: Colors.white,
+                  ),
+                  onTap: () {},
+                  title: const Text(
+                    "Settings",
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                  trailing: const Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xff30336b),
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    FontAwesomeIcons.addressCard,
+                    color: Colors.white,
+                  ),
                   onTap: () {},
                   title: Text(
                     "Billing Address",
@@ -118,6 +159,10 @@ class ProfileView extends GetView<ProfileController> {
                   color: Color(0xff30336b),
                 ),
                 child: ListTile(
+                  leading: Icon(
+                    FontAwesomeIcons.rightFromBracket,
+                    color: Colors.white,
+                  ),
                   onTap: () {},
                   title: Text(
                     "Log Out",
@@ -208,7 +253,7 @@ class ProfileView extends GetView<ProfileController> {
                   ),
                   onPressed: () {
                     Get.to(
-                      AddCarView(),
+                      TakePhoto(),
                       transition: Transition.upToDown,
                     );
                   },

@@ -14,7 +14,7 @@ class AddCarView extends GetView<AddCarController> {
     final controller = TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AddCarView'),
+        title: const Text('Add Car'),
         centerTitle: true,
       ),
       body: Center(
@@ -40,19 +40,12 @@ class AddCarView extends GetView<AddCarController> {
                   style: TextStyle(color: Colors.black),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
-                const TextField(
-                  decoration: InputDecoration(
-                      label: Text("Vehicle Make"),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(width: 1))),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const TextField(
+
+                TextField(
+                  readOnly: true,
+                  controller: TextEditingController(text: "Tesla"),
                   decoration: InputDecoration(
                       label: Text("Vehicle Model"),
                       border: OutlineInputBorder(
@@ -62,8 +55,10 @@ class AddCarView extends GetView<AddCarController> {
                 const SizedBox(
                   height: 15,
                 ),
-                const TextField(
+                TextField(
+                  controller: TextEditingController(text: "2023"),
                   keyboardType: TextInputType.number,
+                  readOnly: true,
                   decoration: InputDecoration(
                       label: Text("Vehicle Year"),
                       border: OutlineInputBorder(
@@ -74,7 +69,9 @@ class AddCarView extends GetView<AddCarController> {
                 const SizedBox(
                   height: 15,
                 ),
-                const TextField(
+                TextField(
+                  controller: TextEditingController(text: "25423"),
+                  readOnly: true,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       label: Text("License Plate"),

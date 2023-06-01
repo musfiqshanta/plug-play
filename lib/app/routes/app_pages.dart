@@ -14,6 +14,8 @@ import '../modules/signUp/bindings/sign_up_binding.dart';
 import '../modules/signUp/views/sign_up_view.dart';
 import '../modules/stationDetails/bindings/station_details_binding.dart';
 import '../modules/stationDetails/views/station_details_view.dart';
+import '../modules/vehicles/bindings/vehicles_binding.dart';
+import '../modules/vehicles/views/vehicles_view.dart';
 
 part 'app_routes.dart';
 
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.ADD_CAR,
       page: () => AddCarView(),
       binding: AddCarBinding(),
+    ),
+    GetPage(
+      name: _Paths.VEHICLES,
+      page: () => const VehiclesView(),
+      binding: VehiclesBinding(),
     ),
   ];
 }
