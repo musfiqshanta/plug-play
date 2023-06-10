@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:plugandplay/main.dart';
-
 import '../../stationDetails/views/station_details_view.dart';
 import '../controllers/home_controller.dart';
 

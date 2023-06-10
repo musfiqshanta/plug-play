@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:get/get.dart';
-
 import '../../signIn/views/sign_in_view.dart';
 import '../controllers/add_car_controller.dart';
 
@@ -40,11 +38,31 @@ class AddCarView extends GetView<AddCarController> {
                   style: TextStyle(color: Colors.black),
                 ),
                 const SizedBox(
-                  height: 35,
+                  height: 20,
                 ),
 
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    CircleAvatar(
+                        radius: 50,
+                        backgroundImage: AssetImage("assets/img/car.jpg")),
+                    Positioned(
+                      left: 65,
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.camera_alt_outlined,
+                            size: 40,
+                          )),
+                    )
+                  ],
+                ),
+
+                const SizedBox(
+                  height: 30,
+                ),
                 TextField(
-                  readOnly: true,
                   controller: TextEditingController(text: "Tesla"),
                   decoration: InputDecoration(
                       label: Text("Vehicle Model"),
